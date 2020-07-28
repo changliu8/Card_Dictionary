@@ -8,6 +8,10 @@ NEW | Pug | Query | DynamicHTML
 :------------ | :-------------| :-------------| :-------------
 Completion| :heavy_check_mark: |  :heavy_check_mark: | :heavy_check_mark:
 
+Functionaliyu | QueryByType 
+:------------ | :-------------
+Completion| :heavy_check_mark:
+
 | Commands |
 | ---------------------|
 |node server.js|
@@ -17,5 +21,7 @@ Completion| :heavy_check_mark: |  :heavy_check_mark: | :heavy_check_mark:
 |http://localhost:3000/cards|
 |http://localhost:3000/cards/CARDSID|
 |http://localhost:3000/cards?name=CARDSNAME|
+|http://localhost:3000/cards?type=CARDSTYPE|
+
 
 
