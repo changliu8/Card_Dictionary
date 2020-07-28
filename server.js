@@ -25,14 +25,18 @@ const pug = require('pug');
 //Pug functions to render various pages
 const cardsSpec = pug.compileFile('views/pages/card.pug');
 const cardsCont = pug.compileFile('views/pages/cards.pug')
+const cardsType = pug.compileFile('views/pages/types.pug')
 
 //Set up the required data
 let cardData = require("./cards.json");
 let cards = {}; //Stores all of the cards, key=id
+let tmparr = [];
+let count = 0;
 cardData.forEach(card => {
 	cards[card.id] = card;
+	tmparr[count] = card;
+	count++;
 });
-
 function send404(response){
 	response.statusCode = 404;
 	response.write("Unknown resource.");
@@ -80,6 +84,17 @@ const server = http.createServer(function (request, response) {
 				response.end(content);
 				return;
 			}
+		}
+		else if(request.url.startsWith("/cards?type=")){
+			let pid = request.url.slice(12);
+			var tmptype = tmparr.filter(function(elem){
+				return elem.type === pid;
+			})
+			console.log(tmptype)
+			let content = cardsType({cards: tmptype});
+			response.statusCode = 200;
+			response.end(content);
+			return;
 		}
 	}
 	response.statusCode = 404;
