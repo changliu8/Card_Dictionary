@@ -1,0 +1,12 @@
+html
+	head
+		title Cards Collections
+body
+
+	div#main
+		h1 List of products:
+		each card in cards
+			a(href="/cards/" + card.id) #{card.name}
+			br
+			
+	include ../partials/footer

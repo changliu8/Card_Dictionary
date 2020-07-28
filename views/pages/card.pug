@@ -1,0 +1,20 @@
+html
+	head
+		title
+			Cards Collections
+body
+	
+	div#main
+		h1 #{card.name}
+		p ID: #{card.id}
+		p cardClass: #{card.cardClass}
+		p set: #{card.set}
+		p type: #{card.type}
+		p artist: #{card.artist}
+		p text: #{card.text}
+		if card.rarity
+			p rarity: #{card.rarity}
+		if card.mechanics
+			p mechanics: #{card.mechanics}
+
+	include ../partials/footer
