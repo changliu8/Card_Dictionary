@@ -8,7 +8,7 @@ NEW | Pug | Query | DynamicHTML
 :------------ | :-------------| :-------------| :-------------
 Completion| :heavy_check_mark: |  :heavy_check_mark: | :heavy_check_mark:
 
-Functionaliyu | QueryByType 
+Functionality | QueryByType 
 :------------ | :-------------
 Completion| :heavy_check_mark:
 
